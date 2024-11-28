@@ -40,6 +40,6 @@ public class Expense {
 
     @Override
     public String toString() {
-        return date + " - " + description + ": $" + amount;
+        return date + " - " + description + ": Руб." + amount;
     }
 }

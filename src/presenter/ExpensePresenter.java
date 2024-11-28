@@ -9,12 +9,11 @@ public class ExpensePresenter implements ExpenseContract.Presenter {
     private ExpenseContract.View view;
     private final ExpenseManager repository;
 
-    public ExpensePresenter(ExpenseContract.View view, ExpenseManager repository) {
-        this.view = view;
+    public ExpensePresenter(ExpenseManager repository) {
         this.repository = repository;
     }
 
-    // Метод для установки view после создания объекта
+    // Добавляем метод setView для связи с view
     public void setView(ExpenseContract.View view) {
         this.view = view;
     }
@@ -22,7 +21,7 @@ public class ExpensePresenter implements ExpenseContract.Presenter {
     @Override
     public void addExpense(Expense expense) {
         repository.addExpense(expense);
-        view.showMessage("Expense added successfully!");
+        view.showMessage("Расходы успешно добавлены!");
     }
 
     @Override
@@ -34,6 +33,6 @@ public class ExpensePresenter implements ExpenseContract.Presenter {
     @Override
     public void saveExpenses() {
         repository.saveExpenses();
-        view.showMessage("Expenses saved successfully!");
+        view.showMessage("Расходы успешно сохранены!");
     }
 }

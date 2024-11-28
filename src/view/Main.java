@@ -8,8 +8,8 @@ public class Main {
         // Инициализация репозитория
         ExpenseManager repository = new ExpenseManager();
 
-        // Создание экземпляра Presenter без view
-        ExpensePresenter presenter = new ExpensePresenter(null, repository);
+        // Создание экземпляра Presenter
+        ExpensePresenter presenter = new ExpensePresenter(repository);
 
         // Создание экземпляра ConsoleView и передача presenter
         ConsoleView view = new ConsoleView(presenter);
@@ -21,4 +21,3 @@ public class Main {
         view.start();
     }
 }
-

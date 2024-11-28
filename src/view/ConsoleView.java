@@ -50,7 +50,7 @@ public class ConsoleView implements ExpenseContract.View {
                     presenter.saveExpenses();
                     return;
                 }
-                default -> System.out.println("Invalid option!");
+                default -> System.out.println("Недопустимый вариант!");
             }
         }
     }

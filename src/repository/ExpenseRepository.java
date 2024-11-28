@@ -1,7 +1,6 @@
 package repository;
 
 import model.Expense;
-
 import java.util.List;
 
 public interface ExpenseRepository {
